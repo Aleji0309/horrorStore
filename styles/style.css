@@ -1,0 +1,40 @@
+:root {
+  /*Primary Colors*/
+--purple-50: #EDE4FF;
+--purple-300:#A775F1;
+--purple-500: #733FC8;
+ 
+
+  /*Neutral Colors*/
+  --white: #FFFFFF;
+  --black: #121212;
+  --red-dark: #a60c0c;
+  --grey-100: #E7EAEE;
+  --grey-200: #CFCFCF;
+  --grey-400: #676D7E;
+  --grey-500: #48556A;
+  --gdark-blue: #19202D;
+
+  --family: 'Barlow Semi Condensed', sans-serif;
+  /*Weights: 200, 400, 600*/
+}
+
+/* Eliminar el modelo caja de css para medidas */
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.main-container {
+  margin: 0 auto;
+  max-height: 100vh;
+  width: 1200px;
+}
+
