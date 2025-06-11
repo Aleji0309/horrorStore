@@ -1,18 +1,11 @@
 :root {
   /*Primary Colors*/
---purple-50: #EDE4FF;
---purple-300:#A775F1;
---purple-500: #733FC8;
- 
 
   /*Neutral Colors*/
   --white: #FFFFFF;
   --black: #121212;
   --red-dark: #a60c0c;
-  --grey-100: #E7EAEE;
   --grey-200: #CFCFCF;
-  --grey-400: #676D7E;
-  --grey-500: #48556A;
   --gdark-blue: #19202D;
 
   --family: 'Barlow Semi Condensed', sans-serif;
@@ -26,6 +19,7 @@ html {
   box-sizing: border-box;
 }
 
+
 *,
 *:before,
 *:after {
@@ -35,6 +29,85 @@ html {
 .main-container {
   margin: 0 auto;
   max-height: 100vh;
-  width: 1200px;
+  width: 1400px;
+  background-color: var(--red-dark);
+} 
+
+.header {
+    width: 100vw;
+    height: 400px;
+    background-image: url('../assets/img/horrorHeaderNuevo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 0.8rem;
+}
+
+.menu-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.menu-list a {
+    text-decoration: none;
+    margin: 2rem ;
+}
+
+.menu-list a img {
+  display: block;
+  height: auto;
+  object-fit: cover; /* asegura que se ajusten bien */
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 400px;
+    height: 200px;
+}
+
+.search-container input {
+    outline: none;
+    margin-right: 2rem;
+    border-radius: 25px;
+    border: none;
+    width: 300px;
+    height: 50px; 
+    font-size: 2rem;
+    font-family: var(--family);
+    text-align: center;
+    color: var(--purple-300);
+    padding: 1rem;
+    box-shadow: 10px 10px 5px 0px rgba(25,32,45,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(25,32,45,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(25,32,45,0.75);
+}
+
+::placeholder {
+  color: var(--grey-200);
+  font-size: 1em;
+}
+
+.section-books {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.book {
+  background-color: var(--white);
+}
+
+.img-container {
+  width: 400px;
+  height: 400px;
+}
+.product-image {
+  width: 100%;
+  height: auto;
 }
 
