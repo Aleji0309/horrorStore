@@ -24,32 +24,42 @@
         </nav>
 
         <div class="search-container">
-            <input type="search" id="site-search" name="search-bar" placeholder="Buscar Producto" />
+            <input type="search" id="site-search" name="search-bar" placeholder="Buscar Producto" class="button" />
             <img src="assets/img/lupa2.png" alt="Lupa">
         </div>
     </header>
 
-    <main class="main-container">
-        <h1>Horror Store</h1>
-        <section class="section-books">
-            <!-- <div class="book">
-                <h2 class="product-name">Nombre</h2>
-                <p  class="product-description">Descripción</p>
-                <p  class="product-price">$Precio</p>
-                <p  class="product-stock">Disponibles: </p>
-                <img src="" alt="Imagen del Producto"> -->
+     <section class="banner">
+            <div class="banner-content">
 
+                <div class="img-banner-container">
+                    <img  class="img-banner" src="assets/img/bruja.png" alt="Imagen Banner">
+                </div>
+                <div class="banner-description">
+                    <h1 class="banner-title">Tu Tienda Maldita</h1>
+                    <p class="banner-description-p">Cuando cae la noche y el viento susurra entre las páginas olvidadas, nuestra tienda despierta...
+                    Aquí no vendemos simples objetos. Vendemos fragmentos de leyendas, ecos de rituales, y huellas de criaturas que nunca deberían haber existido
+                    </p>
+                    <button class="banner-description-button button" >Ver Más...</button>
+                </div> 
+            </div>
+        </section>
+        
+
+    <main class="main-container">
+       
+        <section class="section-books">
                 <?php
                     //  Recorrer el objeto que devuelve query
                     if($result->num_rows>0){
                         while($row = $result->fetch_assoc()){
                             echo "
                                 <div class='book'>
+                                    <div class='img-container'><img class='product-image' src='{$row['imagen']}' alt='Imagen del Producto'></div>
                                     <h2 class='product-name'>Titulo: {$row['nombre_producto']}</h2>
                                     <p  class='product-description'>Descripción: {$row['descripcion']} </p>
                                     <p class='product-price'>Precio: $ {$row['precio']}</p>
                                     <p  class='product-stock'>Disponibles: {$row['stock']} </p>
-                                    <div class='img-container'><img class='product-image' src='{$row['imagen']}' alt='Imagen del Producto'></div>
                                 </div>
                             ";
                         }
