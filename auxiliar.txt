@@ -1,0 +1,3 @@
+UPDATE productos
+SET imagen = 'https://ejemplo.com/nueva-imagen.jpg'
+WHERE id = 2;

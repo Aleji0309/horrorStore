@@ -40,14 +40,14 @@
                     <p class="banner-description-p">Cuando cae la noche y el viento susurra entre las páginas olvidadas, nuestra tienda despierta...
                     Aquí no vendemos simples objetos. Vendemos fragmentos de leyendas, ecos de rituales, y huellas de criaturas que nunca deberían haber existido
                     </p>
-                    <button class="banner-description-button button" >Ver Más...</button>
+                    <button class="banner-description-button button" >Te atreves? </button>
                 </div> 
             </div>
         </section>
         
 
     <main class="main-container">
-       
+       <a class="sections-title">Libros</a>
         <section class="section-books">
                 <?php
                     //  Recorrer el objeto que devuelve query
@@ -56,10 +56,10 @@
                             echo "
                                 <div class='book'>
                                     <div class='img-container'><img class='product-image' src='{$row['imagen']}' alt='Imagen del Producto'></div>
-                                    <h2 class='product-name'>Titulo: {$row['nombre_producto']}</h2>
-                                    <p  class='product-description'>Descripción: {$row['descripcion']} </p>
-                                    <p class='product-price'>Precio: $ {$row['precio']}</p>
-                                    <p  class='product-stock'>Disponibles: {$row['stock']} </p>
+                                    <h2 class='product-name'>{$row['nombre_producto']}</h2>
+                                    <p  class='product-description'>{$row['descripcion']} </p>
+                                    <p class='product-price'>$ {$row['precio']}</p>
+                                    <button class='product-agregar-btn' >Agregar al Carrito</button>
                                 </div>
                             ";
                         }
@@ -69,6 +69,9 @@
                 ?>
             <!-- </div> -->
         </section>
+        <a class="sections-title">Disfraces</a>
+        <a class="sections-title">Máscaras</a>
+           
     </main>
     <footer></footer>
 </body>
